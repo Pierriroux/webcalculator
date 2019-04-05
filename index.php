@@ -5,8 +5,6 @@
 <?php
 $filename = 'friend.txt';
 $file = fopen( $filename, "r" );
-while (!feof($file)) 
-{
 	if(isset($_POST["name"]))
 {	if($_POST["name"]!=""){
 	$file = fopen( $filename, "a" );
@@ -14,6 +12,8 @@ while (!feof($file))
 	fclose($file);
 }
 }
+while (!feof($file)) 
+{
     $name = fgets($file);
     echo "<li>".$name."</li>";
 /*	$word=fgets($file);
