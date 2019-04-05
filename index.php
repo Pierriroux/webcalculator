@@ -1,12 +1,16 @@
 
 <form action="index.php" method="post">
-	Name: <input type="text" name="name">
-	<input type="submit">
+    Name: <input type="text" name="name">
+    <input type="submit">
 </form>
-
 <?php
-/*$file = fopen( $filename, "r" );
-while (!feof($file)) {
+$filename = 'friend.txt';
+$file = fopen( $filename, "r" );
+while (!feof($file)) 
+{
+/*    $filecontents = file_get_contents('words.txt');
+    $words = preg_split('/[\s]+/', $filecontents, -1, PREG_SPLIT_NO_EMPTY);
+    print_r($words);*/
 	$word=fgets($file);
 	if(isset($_GET["nameFilter"]))
 	{
@@ -31,5 +35,5 @@ while (!feof($file)) {
 		echo "<li>".$word."</li>";
 	}
 }
-fclose($file);*/
+fclose($file);
 ?>
