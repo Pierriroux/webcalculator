@@ -1,4 +1,12 @@
-
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Webcalculator</title>
+	</head>
+	<body>
+		<h1>Friend Book</h1>
+	</body>
+</html>
 <form action="index.php" method="post">
     Name: <input type="text" name="name">
     <input type="submit">
