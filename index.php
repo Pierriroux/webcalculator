@@ -9,6 +9,9 @@ while (!feof($file))
 {
     $name = fgets($file);
     echo "<li>".$name."</li>";
+    $na = $_POST['name'];
+    $savestring = $name."n";
+    fwrite($file,$savestring);
 /*	$word=fgets($file);
 	if(isset($_GET["nameFilter"]))
 	{
