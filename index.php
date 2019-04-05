@@ -14,7 +14,7 @@ if(isset($_POST["name"]))
 while (!feof($file)) 
 {
     $word = fgets($file);
-    echo "<li>".$word."</li>";
+    //echo "<li>".$word."</li>";
 /*	$word=fgets($file);
 	if(isset($_GET["nameFilter"]))
 	{
