@@ -26,10 +26,7 @@ while (!feof($file))
 		    $position = strpos($word,$_GET["nameFilter"]);
 		    if($position !== false)
 		    {
-			    if($pos===0)
-			    {
 				    echo "<li>".$word."</li>";
-			    }
 		    }
 			    
 	    }
