@@ -8,7 +8,7 @@ $file = fopen( $filename, "r" );
 while (!feof($file)) 
 {
     $name = fgets($file);
-    echo "<li>".$word."</li>";
+    echo "<li>".$name."</li>";
 /*	$word=fgets($file);
 	if(isset($_GET["nameFilter"]))
 	{
