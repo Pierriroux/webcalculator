@@ -3,7 +3,7 @@
     <input type="submit">
 </form>
 <?php
-$filename = 'friend.txt';*
+$filename = 'friend.txt';
 if(isset($_POST["name"]))
 {
 	if($_POST["name"]!="")
