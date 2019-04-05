@@ -26,8 +26,12 @@ while (!feof($file))
 	    }
 	    
     }
-    echo "<li>".$word."</li>";
+    else
+    {
+	    echo "<li>".$word."</li>";
+    }
 }
+
 fclose($file);
 ?>
 <form action="index.php" method="get">
