@@ -1,14 +1,23 @@
 <form action="index.php" method="post">
-Name: <input type="text" name="name">
-<input type="submit">
+    Name: <input type="text" name="name">
+    <input type="submit">
 </form>
 <?php
 $filename = 'friends.txt';
+if(isset($_POST["name"]))
+{
+    if($_POST["name"]!="")
+    {
+        $file = fopen( $filename, "a" );
+        fwrite( $file, PHP_EOL.$_POST["name"] );
+        fclose($file);
+    }
+}
+/*
 $file = fopen( $filename, "r" );
 while (!feof($file)) {
     // reading file
 }
-
 // appending to file
 $file = fopen( $filename, "a" );
 fwrite( $file, "some string" );
@@ -23,5 +32,5 @@ if($file != false){
         }
     }
     fclose($file);
-    
-    if(isset($_POST['name'] && strlen(
+    */
+?>
