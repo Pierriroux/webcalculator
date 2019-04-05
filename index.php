@@ -1,3 +1,4 @@
+
 <form action="index.php" method="post">
     Name: <input type="text" name="name">
     <input type="submit">
@@ -36,5 +37,6 @@ fclose($file);
 ?>
 <form action="index.php" method="get">
 	<input type="text" name="nameFilter" value="<?=$nameFilter?>">
+	<input type="checkbox" name="startingWith" <?php if ($startingWith=='TRUE') echo "checked"?> value="TRUE">Only names starting with</input>
 	<input type="submit">
 </form>
