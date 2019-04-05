@@ -7,10 +7,6 @@ $filename = 'friend.txt';
 $file = fopen( $filename, "r" );
 while (!feof($file)) 
 {
-
-    $na = $_POST['name'];
-    $savestring = $name."n";
-    fwrite($file,$savestring);
     $name = fgets($file);
     echo "<li>".$name."</li>";
 /*	$word=fgets($file);
