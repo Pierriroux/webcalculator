@@ -20,7 +20,7 @@ while (!feof($file))
     $word = fgets($file);
     if(isset($_GET["nameFilter"]))
     {
-	    if(strstr($word,$_POST["nameFilter"]))
+	    if(strstr($word,$_GET["nameFilter"]))
 	    {
 		    echo "<li>".$word."</li>";
 	    }
