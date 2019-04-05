@@ -1,7 +1,3 @@
-<form action="index.php" method="post">
-    Name: <input type="text" name="name">
-    <input type="submit">
-</form>
 <?php
 $filename = 'friend.txt';
 $file = fopen( $filename, "r" );
@@ -11,6 +7,12 @@ if(isset($_POST["name"]))
 	fwrite( $file, PHP_EOL.$_POST["name"] );
 	fclose($file);
 }
+?>
+<form action="index.php" method="post">
+    Name: <input type="text" name="name">
+    <input type="submit">
+</form>
+<?php
 while (!feof($file)) 
 {
     $name = fgets($file);
