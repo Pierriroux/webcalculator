@@ -3,12 +3,15 @@
     <input type="submit">
 </form>
 <?php
-$filename = 'friend.txt';
-if(isset($_POST["name"]))
+$filename = 'friend.txt';*
+if(isset($_POST["name"])!="")
 {
-	$file = fopen( $filename, "a" );
-	fwrite( $file, PHP_EOL.$_POST["name"] );
-	fclose($file);
+	if(isset($_POST["name"]))
+	{
+		$file = fopen( $filename, "a" );
+		fwrite( $file, PHP_EOL.$_POST["name"] );
+		fclose($file);
+	}
 }
 $file = fopen( $filename, "r" );
 while (!feof($file)) 
