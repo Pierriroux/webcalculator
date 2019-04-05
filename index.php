@@ -1,7 +1,20 @@
+<?php 
+$filename = 'friends.txt';
+if(isset($_POST["name"]))
+{	if($_POST["name"]!=""){
+	$file = fopen( $filename, "a" );
+	fwrite( $file, PHP_EOL.$_POST["name"] );
+	fclose($file);
+}
+}
+?>
+
+
 <form action="index.php" method="post">
-    Name: <input type="text" name="name">
-    <input type="submit">
+	Name: <input type="text" name="name">
+	<input type="submit">
 </form>
+
 <?php
 $file = fopen( $filename, "r" );
 while (!feof($file)) {
@@ -31,3 +44,9 @@ while (!feof($file)) {
 }
 fclose($file);
 ?>
+
+<form action="index.php" method="get">
+	Filter: <input type="text" name="nameFilter">
+	<input type="checkbox" name="startingWith">Only names starting with</input>
+	<input type="submit">
+</form>
