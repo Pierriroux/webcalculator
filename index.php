@@ -21,3 +21,7 @@ while (!feof($file))
 }
 fclose($file);
 ?>
+<form action="index.php" method="get">
+	<input type="text" name="nameFilter" value="<?=$nameFilter?>">
+	<input type="submit">
+</form>
