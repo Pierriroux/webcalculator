@@ -3,8 +3,8 @@
     <input type="submit">
 </form>
 <?php
-/*$filename = 'friends.txt';
-if(isset($_POST["name"]))
+$filename = 'friends.txt';
+/*if(isset($_POST["name"]))
 {
     if($_POST["name"]!="")
     {
@@ -12,17 +12,11 @@ if(isset($_POST["name"]))
         fwrite( $file, PHP_EOL.$_POST["name"] );
         fclose($file);
     }
-}*/
-/*
-$file = fopen( $filename, "r" );
-while (!feof($file)) {
-    // reading file
 }
+*/
 // appending to file
 $file = fopen( $filename, "a" );
 fwrite( $file, "some string" );
-?>
-$file = Fopen($filename,"r");
 $friendsArray = array();
 if($file != false){
     while(!feof($file)){
@@ -32,5 +26,5 @@ if($file != false){
         }
     }
     fclose($file);
-    */
+}
 ?>
