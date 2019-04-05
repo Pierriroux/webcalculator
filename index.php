@@ -4,7 +4,7 @@
 </form>
 <?php
 $filename = 'friend.txt';*
-if(isset($_POST["name"])!="")
+if($_POST["name"]!="")
 {
 	if(isset($_POST["name"]))
 	{
