@@ -5,7 +5,6 @@
 </form>
 <?php
 $filename = 'friend.txt';
-$array = [];
 if(isset($_POST["name"]))
 {
 	if($_POST["name"]!="")
