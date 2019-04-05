@@ -3,7 +3,7 @@
     <input type="submit">
 </form>
 <?php
-$filename = 'friends.txt';
+/*$filename = 'friends.txt';
 if(isset($_POST["name"]))
 {
     if($_POST["name"]!="")
@@ -12,7 +12,7 @@ if(isset($_POST["name"]))
         fwrite( $file, PHP_EOL.$_POST["name"] );
         fclose($file);
     }
-}
+}*/
 /*
 $file = fopen( $filename, "r" );
 while (!feof($file)) {
