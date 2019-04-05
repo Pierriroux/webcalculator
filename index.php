@@ -21,10 +21,27 @@ while (!feof($file))
     $word = fgets($file);
     if(isset($_GET["nameFilter"]))
     {
-	    if(strstr($word,$_GET["nameFilter"]))
+	    if(isset($_GET["startingWith"]))
 	    {
-		    echo "<li>".$word."</li>";
+		    $position = strpos($word,$_GET["nameFilter"]);
+		    if($position !== false)
+		    {
+			    if($pos===0)
+			    {
+				    echo "<li>".$word."</li>";
+			    }
+		    }
+			    
 	    }
+	    else
+	    {
+	    	if(strstr($word,$_GET["nameFilter"]))
+	    	{
+		    echo "<li>".$word."</li>";
+	    	}
+	    }
+	    
+
 	    
     }
     else
