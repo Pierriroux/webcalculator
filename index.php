@@ -4,6 +4,7 @@
 </form>
 <?php
 $filename = 'friend.txt';
+$array = [];
 if(isset($_POST["name"]))
 {
 	if($_POST["name"]!="")
@@ -17,6 +18,14 @@ $file = fopen( $filename, "r" );
 while (!feof($file)) 
 {
     $word = fgets($file);
+    if(isset($_GET["nameFilter"]))
+    {
+	    if(strstr($word,$_POST["nameFilter"]))
+	    {
+		    echo "<li>".$word."</li>";
+	    }
+	    
+    }
     echo "<li>".$word."</li>";
 }
 fclose($file);
